@@ -1,3 +1,4 @@
 rails g scaffold Doctor firstname:string middlename:string lastname:string bdate:date email:string phonenumber:string gender:string clinicname:string clinicaddress:string licensenumber:string 
 
 
+rails g scaffold Company company_name:string company_address:string company_description:text
