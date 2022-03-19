@@ -6,3 +6,5 @@ rails g scaffold Company company_name:string company_address:string company_desc
 rails g scaffold Drug drug_genericname:string drug_brandname:string drug_dosage:string drug_description:text drug_price:decimal companies:references
 
 rails g scaffold Prescription date:date patient_fname:string patient_mname:string patient_lname:string patient_address:string prescribedqty:integer description:text doctors:references
+
+rails g model Prescription_Drug drugs:references prescriptions:references
