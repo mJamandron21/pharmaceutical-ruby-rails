@@ -1,0 +1,67 @@
+<%= form_with(model: doctor) do |form| %>
+  <% if doctor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(doctor.errors.count, "error") %> prohibited this doctor from being saved:</h2>
+
+      <ul>
+        <% doctor.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :firstname %>
+    <%= form.text_field :firstname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :middlename %>
+    <%= form.text_field :middlename %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastname %>
+    <%= form.text_field :lastname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bdate %>
+    <%= form.date_select :bdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phonenumber %>
+    <%= form.text_field :phonenumber %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clinicname %>
+    <%= form.text_field :clinicname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clinicaddress %>
+    <%= form.text_field :clinicaddress %>
+  </div>
+
+  <div class="field">
+    <%= form.label :licensenumber %>
+    <%= form.text_field :licensenumber %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
