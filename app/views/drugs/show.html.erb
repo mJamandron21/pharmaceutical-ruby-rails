@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Drug genericname:</strong>
+  <%= @drug.drug_genericname %>
+</p>
+
+<p>
+  <strong>Drug brandname:</strong>
+  <%= @drug.drug_brandname %>
+</p>
+
+<p>
+  <strong>Drug dosage:</strong>
+  <%= @drug.drug_dosage %>
+</p>
+
+<p>
+  <strong>Drug description:</strong>
+  <%= @drug.drug_description %>
+</p>
+
+<p>
+  <strong>Drug price:</strong>
+  <%= @drug.drug_price %>
+</p>
+
+<p>
+  <strong>Companies:</strong>
+  <%= @drug.companies_id %>
+</p>
+
+<%= link_to 'Edit', edit_drug_path(@drug) %> |
+<%= link_to 'Back', drugs_path %>

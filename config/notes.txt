@@ -2,3 +2,5 @@ rails g scaffold Doctor firstname:string middlename:string lastname:string bdate
 
 
 rails g scaffold Company company_name:string company_address:string company_description:text
+
+rails g scaffold Drug drug_genericname:string drug_brandname:string drug_dosage:string drug_description:text drug_price:decimal companies:references

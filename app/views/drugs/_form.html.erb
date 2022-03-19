@@ -1,0 +1,47 @@
+<%= form_with(model: drug) do |form| %>
+  <% if drug.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(drug.errors.count, "error") %> prohibited this drug from being saved:</h2>
+
+      <ul>
+        <% drug.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :drug_genericname %>
+    <%= form.text_field :drug_genericname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drug_brandname %>
+    <%= form.text_field :drug_brandname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drug_dosage %>
+    <%= form.text_field :drug_dosage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drug_description %>
+    <%= form.text_area :drug_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drug_price %>
+    <%= form.text_field :drug_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :companies_id %>
+    <%= form.text_field :companies_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
