@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_19_042649) do
+ActiveRecord::Schema.define(version: 2022_03_23_134501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,19 +43,19 @@ ActiveRecord::Schema.define(version: 2022_03_19_042649) do
     t.string "drug_dosage"
     t.text "drug_description"
     t.decimal "drug_price"
-    t.bigint "companies_id", null: false
+    t.bigint "company_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["companies_id"], name: "index_drugs_on_companies_id"
+    t.index ["company_id"], name: "index_drugs_on_company_id"
   end
 
   create_table "prescription_drugs", force: :cascade do |t|
-    t.bigint "drugs_id", null: false
-    t.bigint "prescriptions_id", null: false
+    t.bigint "drug_id", null: false
+    t.bigint "prescription_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["drugs_id"], name: "index_prescription_drugs_on_drugs_id"
-    t.index ["prescriptions_id"], name: "index_prescription_drugs_on_prescriptions_id"
+    t.index ["drug_id"], name: "index_prescription_drugs_on_drug_id"
+    t.index ["prescription_id"], name: "index_prescription_drugs_on_prescription_id"
   end
 
   create_table "prescriptions", force: :cascade do |t|
@@ -67,14 +67,14 @@ ActiveRecord::Schema.define(version: 2022_03_19_042649) do
     t.integer "prescribedqty"
     t.decimal "totalcost"
     t.text "description"
-    t.bigint "doctors_id", null: false
+    t.bigint "doctor_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["doctors_id"], name: "index_prescriptions_on_doctors_id"
+    t.index ["doctor_id"], name: "index_prescriptions_on_doctor_id"
   end
 
-  add_foreign_key "drugs", "companies", column: "companies_id"
-  add_foreign_key "prescription_drugs", "drugs", column: "drugs_id"
-  add_foreign_key "prescription_drugs", "prescriptions", column: "prescriptions_id"
-  add_foreign_key "prescriptions", "doctors", column: "doctors_id"
+  add_foreign_key "drugs", "companies"
+  add_foreign_key "prescription_drugs", "drugs"
+  add_foreign_key "prescription_drugs", "prescriptions"
+  add_foreign_key "prescriptions", "doctors"
 end
