@@ -1,3 +1,3 @@
 class Prescription < ApplicationRecord
-  belongs_to :doctors
+  belongs_to :doctor
 end

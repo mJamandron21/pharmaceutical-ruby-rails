@@ -42,8 +42,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :totalcost %>
-    <%= form.text_field :totalcost %>
+    <%= form.label :drug_id %>
+    <%= form.collection_select :drug_id, Drug.all , :id, :drug_brandname, { prompt: "Please select" }, { :multiple => false} %>
   </div>
 
   <div class="field">
@@ -52,8 +52,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :doctors_id %>
-    <%= form.text_field :doctors_id %>
+    <%= form.label :doctor_id %>
+    <%= form.collection_select :doctor_id, Doctor.all , :id, :lastname, { prompt: "Please select" }, { :multiple => false} %>
   </div>
 
   <div class="actions">
