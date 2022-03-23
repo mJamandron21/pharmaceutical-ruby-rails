@@ -37,8 +37,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :companies_id %>
-    <%= form.collection_select :companies_id, Company.all , :id, :company_name, { prompt: "Please select" }, { :multiple => false} %>
+    <%= form.label :company_id %>
+    <%= form.collection_select :company_id, Company.all , :id, :company_name, { prompt: "Please select" }, { :multiple => false} %>
   </div>
 
   <div class="actions">

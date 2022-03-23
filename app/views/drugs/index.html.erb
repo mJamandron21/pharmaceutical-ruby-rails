@@ -23,7 +23,7 @@
         <td><%= drug.drug_dosage %></td>
         <td><%= drug.drug_description %></td>
         <td><%= drug.drug_price %></td>
-        <td><%= drug.companies_id %></td>
+        <td><%= drug.company.company_name %></td>
         <td><%= link_to 'Show', drug %></td>
         <td><%= link_to 'Edit', edit_drug_path(drug) %></td>
         <td><%= link_to 'Destroy', drug, method: :delete, data: { confirm: 'Are you sure?' } %></td>
