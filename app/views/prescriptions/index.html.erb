@@ -13,7 +13,7 @@
       <th>Prescribedqty</th>
       <th>Totalcost</th>
       <th>Description</th>
-      <th>Doctors</th>
+      <th>Doctor</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,7 +29,7 @@
         <td><%= prescription.prescribedqty %></td>
         <td><%= prescription.totalcost %></td>
         <td><%= prescription.description %></td>
-        <td><%= prescription.doctors_id %></td>
+        <td><%= prescription.doctor.lastname %></td>
         <td><%= link_to 'Show', prescription %></td>
         <td><%= link_to 'Edit', edit_prescription_path(prescription) %></td>
         <td><%= link_to 'Destroy', prescription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
