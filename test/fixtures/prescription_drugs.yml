@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  drugs: one
-  prescriptions: one
+  prescription: one
+  drug: one
 
 two:
-  drugs: two
-  prescriptions: two
+  prescription: two
+  drug: two
