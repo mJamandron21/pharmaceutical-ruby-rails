@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Drugs</h1>
+<h1 class=header>Drugs</h1>
 
+<div class=table_containers>
 <table>
   <thead>
     <tr>
@@ -31,7 +32,9 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
+<div class =buttons_container>
 <%= link_to 'New Drug', new_drug_path %>
+</div>

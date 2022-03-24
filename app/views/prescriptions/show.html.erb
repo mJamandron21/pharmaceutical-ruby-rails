@@ -31,8 +31,13 @@
 </p>
 
 <p>
+  <strong>Drug:</strong>
+   
+</p>
+
+<p>
   <strong>Totalcost:</strong>
-  <%= @prescription.totalcost %>
+  <td><%= @prescription.prescription_drugs.joins(:drug).sum(:drug_price) %></td>
 </p>
 
 <p>

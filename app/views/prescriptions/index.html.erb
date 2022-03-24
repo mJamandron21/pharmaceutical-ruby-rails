@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Prescriptions</h1>
+<h1 class=header>Prescriptions</h1>
 
+<div class=table_containers>
 <table>
   <thead>
     <tr>
@@ -11,6 +12,7 @@
       <th>Patient lname</th>
       <th>Patient address</th>
       <th>Prescribedqty</th>
+      <th>Drug</th>
       <th>Totalcost</th>
       <th>Description</th>
       <th>Doctor</th>
@@ -27,7 +29,10 @@
         <td><%= prescription.patient_lname %></td>
         <td><%= prescription.patient_address %></td>
         <td><%= prescription.prescribedqty %></td>
-        <td></td>
+        
+        <td>Drug</td>
+        <td>Totalcost</td>
+
         <td><%= prescription.description %></td>
         <td><%= prescription.doctor.lastname %></td>
         <td><%= link_to 'Show', prescription %></td>
@@ -37,7 +42,9 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
+<div class =buttons_container>
 <%= link_to 'New Prescription', new_prescription_path %>
+<div>
